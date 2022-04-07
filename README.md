@@ -1,2 +1,0 @@
-# CodeWars-
-Daily CodeWars challenges
