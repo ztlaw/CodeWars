@@ -9,6 +9,10 @@ Example
 For input [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15], you should return [10, -65].
 */
 
+// function countPositivesSumNegatives(input) {
+//     return ?;
+// }
+
 //problem: you are given an array of positive and negative integers,
 //return a NEW array with the COUNT of positive integers(length?) and the SUM of negative numbers(reduce?)
 
@@ -23,6 +27,10 @@ For input [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15], you should r
 //return negative sum and push into newArr
 function countPositivesSumNegatives(input){
     let newArr = [] //1
+    if(input == null || input.length == 0){
+      return newArr
+    }
+    
     let positives = input.filter( x => x > 0) // 2
     let negatives = input.filter( x => x < 0).reduce( (a,b) => a+b, 0 )// 3
     newArr.push(positives.length);
