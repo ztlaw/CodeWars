@@ -59,3 +59,4 @@ DNAStrand.pairs = { //using object methods and properties to define complements 
   C: 'G',
   G: 'C',
 }
+*/
