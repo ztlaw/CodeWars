@@ -27,13 +27,23 @@ ex: [
     
   } 
 }
-*/
+
 const transpose = arr => {
     for (let i = 0; i < arr.length; i++) { // loop the rows
        for (let j = 0; j < i; j++) { // looping through each subarray aka arr[0] = [1,2,3] so arr[0][0] = 1
-          const tmp = arr[i][j]; //for first loop, tmp = arr[row0][col0] aka 1
+          const tmp = arr[i][j]; //for first loop, tmp = arr[row0][col0] aka 1 //this is an example of array destructuring. 
           arr[i][j] = arr[j][i]; //arr[row0][col0] now = arr[col0][row0]
           arr[j][i] = tmp
        };
     } return arr
  }
+ */
+
+ function transpose(matrix) {
+  matrix.reverse()
+  for (index in matrix){ // iterates through each index in the matrix
+    for(let column = 0; column < index; column++){
+     [matrix[index][column], matrix[column][index]] =  [matrix[column][index], matrix[index][column]] // [4,2] = [2,4]
+    } 
+  } return matrix
+}
